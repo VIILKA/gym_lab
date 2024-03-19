@@ -17,3 +17,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  
+fonts:
+  - family: Jost
+    fonts:
+      - asset: fonts/Jost-Regular.ttf
+ 
