@@ -6,11 +6,11 @@ ThemeData basicTheme() {
       textTheme: TextTheme(
         displayLarge: TextStyle(
           fontSize: 20,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
         ),
         displayMedium: TextStyle(
           fontSize: 14,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
         ),
         displaySmall: TextStyle(
           fontSize: 12,

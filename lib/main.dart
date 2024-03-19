@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym_lab/core/app_theme.dart';
-import 'package:gym_lab/presentation/login_page.dart';
+import 'package:gym_lab/presentation/loginPage/login_page.dart';
 
 void main() {
   runApp(const MainApp());
