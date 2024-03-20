@@ -11,6 +11,7 @@ ThemeData basicTheme() {
       )),
       textTheme: TextTheme(
         displayLarge: TextStyle(
+          color: Colors.white,
           fontSize: 20,
           fontWeight: FontWeight.w700,
         ),
@@ -20,7 +21,14 @@ ThemeData basicTheme() {
           fontWeight: FontWeight.w700,
         ),
         displaySmall: TextStyle(
+          color: Colors.white,
           fontSize: 12,
+          fontWeight: FontWeight.w700,
+        ),
+        titleSmall: TextStyle(
+          color: Color.fromRGBO(255, 255, 255, 0.507),
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
         ),
       ));
 }

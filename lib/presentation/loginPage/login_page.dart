@@ -19,9 +19,10 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/background.jpg"),
-          fit: BoxFit.cover,
-        ),
+            image: AssetImage("assets/images/background.jpg"),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.8), BlendMode.darken)),
       ),
       child: SafeArea(
         child: Scaffold(
@@ -47,14 +48,14 @@ class _LoginPageState extends State<LoginPage> {
                       .displayMedium!
                       .copyWith(color: PrimaryColor),
                   styleButton: OutlinedButton.styleFrom(
-                    fixedSize: Size(366, 55),
+                    fixedSize: Size(366, 44),
                     backgroundColor: Color.fromARGB(125, 0, 0, 0),
                     side: BorderSide(width: 2.0, color: PrimaryColor),
                   )),
               SizedBox(
                 height: 16,
               ),
-              MyButton(text: "ЗАРЕГИСТРОВАТЬСЯ", size: Size(366, 55)),
+              MyButton(text: "ЗАРЕГИСТРОВАТЬСЯ", size: Size(366, 44)),
               SizedBox(
                 height: 70,
               ),
