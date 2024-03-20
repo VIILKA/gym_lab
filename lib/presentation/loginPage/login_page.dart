@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:gym_lab/core/constants.dart';
+import 'package:gym_lab/presentation/widgets/my_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,67 +16,52 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Builder(builder: (context) {
-      return Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/background.jpg"),
-            fit: BoxFit.cover,
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/background.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 77.0),
+                  child: Image.asset("assets/images/GYMLAB.png"),
+                ),
+              ),
+              Text(
+                'GYM',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              MyButton(
+                  text: "ВОЙТИ",
+                  size: Size(366, 55),
+                  styleText: Theme.of(context)
+                      .textTheme
+                      .displayMedium!
+                      .copyWith(color: PrimaryColor),
+                  styleButton: OutlinedButton.styleFrom(
+                    fixedSize: Size(366, 55),
+                    backgroundColor: Color.fromARGB(125, 0, 0, 0),
+                    side: BorderSide(width: 2.0, color: PrimaryColor),
+                  )),
+              SizedBox(
+                height: 16,
+              ),
+              MyButton(text: "ЗАРЕГИСТРОВАТЬСЯ", size: Size(366, 55)),
+              SizedBox(
+                height: 70,
+              ),
+            ],
           ),
         ),
-        child: SafeArea(
-          child: Scaffold(
-            backgroundColor: Colors.transparent,
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 77.0),
-                    child: Image.asset("assets/images/GYMLAB.png"),
-                  ),
-                ),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'ВОЙТИ',
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Color.fromRGBO(102, 172, 232, 1),
-                        fontWeight: FontWeight.w700),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(125, 0, 0, 0),
-                    fixedSize: Size(366, 44),
-                    side: BorderSide(width: 2.0, color: Colors.blue),
-                  ),
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'ЗАРЕГИСТРОРОВАТЬСЯ',
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Color.fromRGBO(255, 255, 255, 1),
-                        fontWeight: FontWeight.w700),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(125, 0, 0, 0),
-                    fixedSize: Size(366, 44),
-                    side: BorderSide(
-                        width: 2.0,
-                        color: const Color.fromARGB(255, 255, 255, 255)),
-                  ),
-                ),
-                SizedBox(
-                  height: 70,
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    });
+      ),
+    );
   }
 }
